@@ -6,7 +6,7 @@
     if (isset($_GET["buscarFuncionario"])) {
         $funcionarios = buscarFuncionarios($funcionarios, $_GET["buscarFuncionario"]);
     }
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -16,13 +16,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Empresa X</title>
 </head>
 <body>
 
     <header>
-        <h1>Funcionários da Empresa X</h1>
+        <h1 class="primeiro-titulo">Funcionários da Empresa X</h1>
         <?php
             $count = 0;
             foreach($funcionarios as $funcionario) {
@@ -37,6 +38,7 @@
     <main>
         <form>
             <label for="">Pesquisa por nome:</label>
+            <div class="div-form">
             <input
                 type="text"
                 value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>"
@@ -44,7 +46,26 @@
                 id="buscarFuncionario"
                 placeholder="Digite o nome...">
             <button class="btn"><i class="fa fa-search"></i></button>
+            </div>
         </form>
+
+        <button id="addFuncionario">Adicionar funcionário</button>
+
+        <div class="modal-form">
+        <form id="form-funcionario" action="acoes.php" method="POST">
+            <p>Adicionar funcionário:</p>
+            <input type="text" name="id" placeholder="Digite o id..."> 
+            <input type="text" name="first_name" placeholder="Digite o primeiro nome...">
+            <input type="text" name="last_name" placeholder="Digite o sobrenome...">
+            <input type="text" name="email" placeholder="Digite o email...">
+            <input type="text" name="gender" placeholder="Digite o gênero...">
+            <input type="text" name="ip_address" placeholder="Digite o IP...">
+            <input type="text" name="country" placeholder="Digite o país...">
+            <input type="text" name="department" placeholder="Digite o departamento...">
+            <button>Salvar</button>
+        </form>
+        </div>
+
 
         <table border="1">
             <tr>
