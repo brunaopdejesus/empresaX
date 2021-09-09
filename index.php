@@ -4,7 +4,7 @@
     $funcionarios = lerArquivo("empresaX.json");
 
     if (isset($_GET["buscarFuncionario"])) {
-        $funcionarios = buscarFuncionario($funcionarios, $_GET["buscarFuncionario"])
+        $funcionarios = buscarFuncionarios($funcionarios, $_GET["buscarFuncionario"]);
     }
 
 ?>
@@ -23,13 +23,22 @@
 
     <header>
         <h1>Funcionários da Empresa X</h1>
-        <p>A empresa conta com 1001 funcionários.</p>
+        <?php
+            $count = 0;
+            foreach($funcionarios as $funcionario) {
+                if($funcionario == true) {
+                    $count++;
+                }
+            }
+            echo "A empresa conta com $count funcionários";
+        ?>
     </header>
 
     <main>
         <form>
             <label for="">Pesquisa por nome:</label>
-            <input type="text"
+            <input
+                type="text"
                 value="<?= isset($_GET["buscarFuncionario"]) ? $_GET["buscarFuncionario"] : "" ?>"
                 name="buscarFuncionario"
                 id="buscarFuncionario"
@@ -37,7 +46,7 @@
             <button class="btn"><i class="fa fa-search"></i></button>
         </form>
 
-        <table border="10">
+        <table border="1">
             <tr>
                 <th>ID</th>
                 <th>First Name</th>
@@ -59,9 +68,9 @@
                 <td> <?= $funcionario->last_name; ?> </td>
                 <td> <?= $funcionario->email; ?> </td>
                 <td> <?= $funcionario->gender; ?> </td>
-                <td> <?= $funcionario->ip_adress; ?> </td>
+                <td> <?= $funcionario->ip_address; ?> </td>
                 <td> <?= $funcionario->country; ?> </td>
-                <td> <?= $funcionario->departament; ?> </td>
+                <td> <?= $funcionario->department; ?> </td>
             </tr>
 
             <?php

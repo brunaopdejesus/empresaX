@@ -26,26 +26,31 @@ p {
     font-size: 19px;
 }
 
+
 label {
     margin-top: 20px;
     font-size: 18px;
     margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input {
     margin-top: 4px;
     font-size: 16px;
     margin-left: 12px;
-    width: 96%;
-    margin-right: 4px;
+    width: 40%;
+    /* margin-right: 4px; */
     line-height: 2em;
     padding-left: 8px;
+    margin: auto;
 }
 
 input, button {
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
-
 
 .btn {
     background-color: cadetblue;
@@ -54,7 +59,6 @@ input, button {
     padding: 9px 13px;
     font-size: 16px;
     cursor: pointer;
-    margin-right: 4px;
 }
   
 .btn:hover {
@@ -63,5 +67,13 @@ input, button {
 }
 
 table {
-    border: 1;
+    border: 10;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

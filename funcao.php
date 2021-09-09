@@ -11,7 +11,9 @@ function buscarFuncionarios($funcionarios, $first_name) {
     $filtroFuncionarios = [];
 
     foreach($funcionarios as $funcionario) {
-        $filtroFuncionarios[] = $funcionario;
+        if($funcionario->first_name == $first_name) {
+            $filtroFuncionarios[] = $funcionario;
+        }
     }
 
     return $filtroFuncionarios;
