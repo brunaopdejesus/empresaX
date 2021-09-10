@@ -26,7 +26,7 @@ function buscarFuncionarios($funcionarios, $first_name) {
 }
 
 function adicionarFuncionario($nomeArquivo, $novoFuncionario) {
-    $funcionarios = lerAquivo($nomeArquivo);
+    $funcionarios = lerArquivo($nomeArquivo);
 
     $funcionarios[] = $novoFuncionario;
 

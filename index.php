@@ -49,25 +49,29 @@
             </div>
         </form>
 
-        <button id="addFuncionario">Adicionar funcionário</button>
+        <!-- <button class="addFuncionario" id="addFuncionario">Adicionar funcionário</button> -->
+        <div class="buttons">
+            <button class="btn" id="addFuncionario"><i class="fa fa-plus"></i></button>
+            <button class="btn" id="editFuncionario"><i class="fa fa-pencil"></i></button>
+            <button class="btn" id="deleteFuncionario"><i class="fa fa-trash"></i></button>
+        </div>
 
         <div class="modal-form">
         <form id="form-funcionario" action="acoes.php" method="POST">
-            <p>Adicionar funcionário:</p>
-            <input type="text" name="id" placeholder="Digite o id..."> 
-            <input type="text" name="first_name" placeholder="Digite o primeiro nome...">
-            <input type="text" name="last_name" placeholder="Digite o sobrenome...">
-            <input type="text" name="email" placeholder="Digite o email...">
-            <input type="text" name="gender" placeholder="Digite o gênero...">
-            <input type="text" name="ip_address" placeholder="Digite o IP...">
-            <input type="text" name="country" placeholder="Digite o país...">
-            <input type="text" name="department" placeholder="Digite o departamento...">
-            <button>Salvar</button>
+            <h1 class="h1-form-modal">Adicionar funcionário:</h1>
+            <input class="inputForm" type="text" name="id" placeholder="Digite o id..."> 
+            <input class="inputForm" type="text" name="first_name" placeholder="Digite o primeiro nome...">
+            <input class="inputForm" type="text" name="last_name" placeholder="Digite o sobrenome...">
+            <input class="inputForm" type="text" name="email" placeholder="Digite o email...">
+            <input class="inputForm" type="text" name="gender" placeholder="Digite o gênero...">
+            <input class="inputForm"class="inputForm" type="text" name="ip_address" placeholder="Digite o IP...">
+            <input class="inputForm" type="text" name="country" placeholder="Digite o país...">
+            <input class="inputForm" type="text" name="department" placeholder="Digite o departamento...">
+            <button class="btnSalvar">Salvar</button>
         </form>
         </div>
 
-
-        <table border="1">
+        <table>
             <tr>
                 <th>ID</th>
                 <th>First Name</th>
