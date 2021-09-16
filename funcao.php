@@ -37,7 +37,7 @@ function adicionarFuncionario($nomeArquivo, $novoFuncionario) {
 
 function deletarFuncionario($nomeArquivo, $idFuncionario) {
     
-    $funcionarios = lerAquivo($nomeArquivo);
+    $funcionarios = lerArquivo($nomeArquivo);
     
     foreach($funcionarios as $chave => $funcionario) {
         if($funcionario->id == $idFuncionario) {
@@ -48,5 +48,19 @@ function deletarFuncionario($nomeArquivo, $idFuncionario) {
     $json = json_encode(array_values($funcionarios));
 
     file_put_contents($nomeArquivo, $json);
+
+}
+
+function buscarFuncionarioPorId($nomeArquivo, $idFuncionario) {
+
+    $funcionarios = lerArquivo($nomeArquivo);
+
+    foreach ($funcionarios as $funcionario) {
+        
+        if ($funcionario->id) {
+            return $funcionario;     
+        }
+
+    }
 
 }

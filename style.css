@@ -172,3 +172,12 @@ footer {
     margin-top: 15px;
     padding-bottom: 15px;
 }
+
+.container-form{
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

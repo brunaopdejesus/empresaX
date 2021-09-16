@@ -95,6 +95,7 @@ if (isset($_GET["buscarFuncionario"])) {
                     <td> <?= $funcionario->department; ?> </td>
                     <td>
                         <button 
+                            onclick="editar(<?= $funcionario->id ?>)" 
                             class="btn" 
                             id="editFuncionario">
                             <i class="fa fa-pencil"></i>
