@@ -28,16 +28,16 @@
             if (!$funcionario) echo "<h1>Funcionário não encontrado</h1>";
             else {
             ?>
-                <h1>Editar funcionário</h1>
+                <h1 style="color: white; margin-bottom: 2px; font-size: 30px; font-weight: 100;">Editar funcionário</h1>
                 <input type="hidden" placeholder="Digite o id" name="id" value="<?= $funcionario->id ?>"/>
-                <input type="text" placeholder="Digite o primeiro nome" name="first_name" value="<?= $funcionario->first_name ?>"/>
-                <input type="text" placeholder="Digite o sobrenome" name="last_name" value="<?= $funcionario->last_name ?>"/>
-                <input type="text" placeholder="Digite o e-mail" name="email" value="<?= $funcionario->email ?>"/>
-                <input type="text" placeholder="Digite o sexo" name="gender" value="<?= $funcionario->gender ?>"/>
-                <input type="text" placeholder="Digite o IP" name="ip_address" value="<?= $funcionario->ip_address ?>"/>
-                <input type="text" placeholder="Digite o país" name="country" value="<?= $funcionario->country ?>"/>
-                <input type="text" placeholder="Digite o departamento" name="department" value="<?= $funcionario->department ?>"/>
-                <button>Salvar</button>
+                <input type="text" style="width: 300px;" placeholder="Digite o primeiro nome" name="first_name" value="<?= $funcionario->first_name ?>"/>
+                <input type="text" style="width: 300px;" placeholder="Digite o sobrenome" name="last_name" value="<?= $funcionario->last_name ?>"/>
+                <input type="text" style="width: 300px;" placeholder="Digite o e-mail" name="email" value="<?= $funcionario->email ?>"/>
+                <input type="text" style="width: 300px;" placeholder="Digite o sexo" name="gender" value="<?= $funcionario->gender ?>"/>
+                <input type="text" style="width: 300px;" placeholder="Digite o IP" name="ip_address" value="<?= $funcionario->ip_address ?>"/>
+                <input type="text" style="width: 300px;" placeholder="Digite o país" name="country" value="<?= $funcionario->country ?>"/>
+                <input type="text" style="width: 300px;" placeholder="Digite o departamento" name="department" value="<?= $funcionario->department ?>"/>
+                <button style="width: 100px; height: 33px; margin-top: 5px; background-color: rgb(106, 139, 141); color: white; font-size: 19px; border: 2px solid rgb(48, 95, 97);">Salvar</button>
             <?php } ?>
         </form>
     </div>
